@@ -293,6 +293,14 @@ function EditPage(sold){
     document.body.appendChild(form);
 }
 
+function initializeData(){
+    if (!localStorage.soldiers){
+        localStorage.soldiers = ` 
+    [{"id":1,"name":"Daniel Robertson","rank":"Private First Class","position":"Medic","platoon":"1st Platoon","status":"Active","time":"16"},{"id":2,"name":"Jacob Turner","rank":"Staff Sergeant","position":"Platoon Sergeant","platoon":"2nd Platoon","status":"Retired","time":"10"},{"id":3,"name":"Marcus Lee","rank":"Specialist","position":"Radio Operator","platoon":"1st Platoon","status":"Inactive","time":"7"}]
+    `;}
+}
+
+initializeData();
 HomePage();
 
 
