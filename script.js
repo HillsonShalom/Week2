@@ -116,6 +116,10 @@ function HomePage(){
     submitInput.value = 'Add Personnel';
     submitInput.addEventListener('click', (e) => {
         e.preventDefault();
+        if (nameInput.value === '' || rankInput.value === '' || positionInput.value === '' || platoonInput.value === '' || statusInput.value === '' || timeInput.value === '') {
+            alert('Please fill in all fields');
+            return;
+        }
         serv.add(nameInput.value, rankInput.value, positionInput.value, platoonInput.value, statusInput.value, timeInput.value);
         populateTable();
         form.querySelectorAll('input[type="text"], input[type="number"]').forEach(e => e.value = '');

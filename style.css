@@ -8,6 +8,11 @@
     z-index: 10;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 .header {
     color: green;
     font-weight: bold;
@@ -19,6 +24,7 @@
 }
 
 .form {
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,9 +68,11 @@
 
 .table-container {
     z-index: 1;
-    position: absolute;
-    top: 400px;
+    /* position: fixed; */
+    margin-top: 400px;
+    top: 0;
     width: 100vw;
+    /* height: 100vh; */
 }
 
 .select > * {
